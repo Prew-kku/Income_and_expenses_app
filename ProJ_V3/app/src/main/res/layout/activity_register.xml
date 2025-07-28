@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".login.Register">
+
+
+    <EditText
+        android:id="@+id/rEdtConf"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="ยืนยันรหัสผ่าน"
+        android:inputType="textPassword"
+        android:padding="18dp"
+
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/rEdtPass"
+        app:layout_constraintStart_toStartOf="@+id/rEdtPass"
+        app:layout_constraintTop_toBottomOf="@+id/rEdtPass" />
+
+    <EditText
+        android:id="@+id/rEdtUser"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="ชื่อ"
+        android:inputType="text"
+        android:padding="18dp"
+        android:textColor="@android:color/white"
+
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/rEdtPass"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="รหัสผ่าน"
+        android:inputType="textPassword"
+        android:padding="18dp"
+
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/rEdtUser"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rEdtUser"
+        app:layout_constraintTop_toBottomOf="@+id/rEdtUser" />
+
+    <Button
+        android:id="@+id/rBtnReg"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button"
+        android:text="สมัครใช้งาน"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio" />
+
+    <EditText
+        android:id="@+id/birth"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="วันเกิด dd/mm/yy"
+        android:padding="18dp"
+        android:textColor="@android:color/white"
+
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/rEdtConf"
+        app:layout_constraintStart_toStartOf="@+id/rEdtConf"
+        app:layout_constraintTop_toBottomOf="@+id/rEdtConf" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="80dp"
+
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="เบอร์มือถือ"
+        android:padding="18dp"
+        android:textColor="@android:color/white"
+
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/birth"
+        app:layout_constraintHorizontal_bias="0.982"
+        app:layout_constraintStart_toStartOf="@+id/birth"
+        app:layout_constraintTop_toBottomOf="@+id/birth" />
+
+    <RadioButton
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="ฉันยอมรับข้อตกลงการใช้งานและนโยบายความเป็นส่วนตัว"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+    <TextView
+        android:id="@+id/textLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="มีบัญชีอยู่แล้วใช่ไหม?"
+
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/rBtnReg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rBtnReg"
+        app:layout_constraintTop_toBottomOf="@+id/rBtnReg" />
+
+    <TextView
+        android:id="@+id/textLog2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="เข้าสู่ระบบ"
+
+
+        android:textColor="@color/primary"
+        app:layout_constraintStart_toEndOf="@+id/textLog"
+        app:layout_constraintTop_toTopOf="@+id/textLog" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="ลงชื่อเข้าใช้"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="24dp"
+
+        android:layout_marginTop="10dp"
+        android:contentDescription="User Icon"
+        android:src="@drawable/user2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rEdtUser" />
+
+    <ImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+
+        android:layout_marginTop="20dp"
+
+        android:contentDescription="Phone Icon"
+        android:src="@drawable/phone2"
+        app:layout_constraintEnd_toEndOf="@+id/imgCalendar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imgCalendar"
+        app:layout_constraintTop_toBottomOf="@+id/birth" />
+
+    <ImageView
+        android:id="@+id/imgCalendar"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+
+
+        android:layout_marginTop="20dp"
+        android:contentDescription="Calendar"
+        android:src="@drawable/calendar"
+        app:layout_constraintEnd_toEndOf="@+id/imgKey"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imgKey"
+        app:layout_constraintTop_toBottomOf="@+id/rEdtConf" />
+
+    <ImageView
+        android:id="@+id/imgKey"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+
+        android:layout_marginTop="12dp"
+        android:contentDescription="Key"
+        android:src="@drawable/key"
+        app:layout_constraintEnd_toEndOf="@+id/imgUser"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imgUser"
+        app:layout_constraintTop_toTopOf="@+id/rEdtPass" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#72FF68</color>
+    <color name="blackT">#434343</color>
+    <color name="pink1">#FF8284</color>
+    <color name="pink2">#FFDDDD</color>
+    <color name="pinkTOPapp">#FFB3B5</color>
+    <color name="BUTcolorblack">#444444</color>
+
+    <color name="purple_200">#0F9D58</color>
+    <color name="purple_500">#0F9D58</color>
+    <color name="purple_700">#0F9D58</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="grey">#aaa</color>
+    <color name="button_color">#1E573B</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="red">#F44336</color>
+
+    <!-- *****************pie_color*************** -->
+    <color name="pie_in_color1">#35A2E7</color>
+    <color name="pie_in_color2">#0C8D00</color>
+    <color name="pie_in_color3">#FF5252</color>
+    <color name="pie_in_color4">#D9D9D9</color>
+
+    <color name="pie_out_color1">#E79735</color>
+    <color name="pie_out_color2">#D7D97B</color>
+    <color name="pie_out_color3">#FF9393</color>
+    <color name="pie_out_color4">#D9D9D9</color>
+
+
+    <color name="gray_dark">#222222</color>  <!-- เทาเข้ม -->
+    <color name="background_dark">#2C2C2C</color>  <!-- เทาเข้มอมม่วง -->
+    <color name="primary">#FF8284</color>  <!-- สีปุ่มหลัก (ชมพู) -->
+    <color name="secondary">#FFB6C1</color>  <!-- สีปุ่มลงชื่อเข้าใช้ -->
+
+
+</resources>

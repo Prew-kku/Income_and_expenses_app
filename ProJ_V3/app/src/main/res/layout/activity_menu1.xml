@@ -1,0 +1,168 @@
+<RelativeLayout
+android:id="@+id/main"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+android:fitsSystemWindows="true"
+tools:context=".main_app.menu1">
+
+<!-- Top App Bar (แถบด้านบน) -->
+<com.google.android.material.appbar.MaterialToolbar
+    android:id="@+id/topAppBar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/pinkTOPapp"
+    android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+    app:title="หน้ารายรับ"
+    app:titleTextColor="@android:color/white"
+    app:navigationIcon="@drawable/baseline_add_home_24"
+    android:elevation="4dp"/>
+
+<!-- ส่วนที่สามารถเลื่อน (ScrollView) -->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/topAppBar"
+    android:layout_above="@id/bottomAppBar"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blackT">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@color/pink2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/btn_in"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/BUTcolorblack"
+                android:text="รายรับ"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_out"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/pinkTOPapp"
+                android:text="รายจ่าย"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="คงเหลือ xxxxx"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.855" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="411dp"
+            android:layout_height="401dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pieChart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+<!-- FloatingActionButton (ปุ่มลอย) -->
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/btnAdd"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="30dp"
+    android:src="@drawable/baseline_add_24"
+    app:backgroundTint="@color/pink1"
+    app:elevation="8dp"
+    app:maxImageSize="40dp" />
+
+<!-- BottomAppBar (แถบล่าง) -->
+<com.google.android.material.bottomappbar.BottomAppBar
+    android:id="@+id/bottomAppBar"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:backgroundTint="@color/pink2"
+    app:fabAlignmentMode="center"
+    app:fabCradleRoundedCornerRadius="30dp"
+    app:fabCradleMargin="8dp"
+    app:fabCradleVerticalOffset="10dp"
+    app:elevation="8dp"
+    tools:ignore="BottomAppBar">
+
+    <!-- ไอคอนปุ่ม -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/baseline_add_home_24"
+            android:background="@android:color/transparent"/>
+
+        <View
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/baseline_settings_24"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+</com.google.android.material.bottomappbar.BottomAppBar>
+
+</RelativeLayout>

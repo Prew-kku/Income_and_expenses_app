@@ -1,0 +1,217 @@
+<RelativeLayout
+    android:id="@+id/activity_add_money"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".Add_and_Subtract.add_money">
+
+    <!-- Top App Bar (แถบด้านบน) -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/pinkTOPapp"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+        app:navigationIcon="@drawable/baseline_add_24"
+        app:title="เพิ่มตัง"
+        app:titleTextColor="@android:color/white" />
+
+    <!-- ส่วนที่สามารถเลื่อน (ScrollView) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topAppBar"
+        android:layout_above="@id/bottomAppBar"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blackT">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/pinkTOPapp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_add_money"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/btn_add_money"
+                    app:layout_constraintTop_toTopOf="@+id/btn_add_money"
+                    android:background="@color/blackT">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <Button
+                    android:id="@+id/btn_add_money"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="70dp"
+                    android:backgroundTint="@color/BUTcolorblack"
+                    android:text="รายรับ"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+                <Button
+                    android:id="@+id/btn_reduce_money"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="70dp"
+                    android:backgroundTint="@color/pink2"
+                    android:text="รายจ่าย"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageButton
+                    android:id="@+id/btncheck"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="13dp"
+                    android:backgroundTint="@color/pinkTOPapp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.518"
+                    app:srcCompat="@drawable/baseline_check_24" />
+
+                <ImageButton
+                    android:id="@+id/backhome"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/pinkTOPapp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_add_money"
+                    app:layout_constraintHorizontal_bias="0.011"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal"
+                android:layout_width="380dp"
+                android:layout_height="115dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/baseline_smart_button_24"
+                android:backgroundTint="@color/pink2"
+                android:ems="10"
+                android:hint="EnterNumber   ฿"
+                android:inputType="numberDecimal"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+            <Button
+                android:id="@+id/btn_show_dialog"
+                android:layout_width="380dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/pink2"
+                android:drawableLeft="@drawable/baseline_menu_24"
+                android:drawableTint="@color/black"
+                android:gravity="center_vertical"
+                android:padding="30dp"
+                android:text="เลือกหมวดหมู่"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- FloatingActionButton (ปุ่มลอย) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/baseline_add_24"
+        app:backgroundTint="@color/pink1"
+        app:elevation="8dp"
+        app:maxImageSize="40dp" />
+
+    <!-- BottomAppBar (แถบล่าง) -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/pink2"
+        app:fabAlignmentMode="center"
+        app:fabCradleRoundedCornerRadius="30dp"
+        app:fabCradleMargin="8dp"
+        app:fabCradleVerticalOffset="10dp"
+        app:elevation="8dp"
+        tools:ignore="BottomAppBar">
+
+        <!-- ไอคอนปุ่ม -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/baseline_add_home_24"
+                android:background="@android:color/transparent"/>
+
+            <View
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/baseline_settings_24"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</RelativeLayout>

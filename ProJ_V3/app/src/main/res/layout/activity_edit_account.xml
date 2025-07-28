@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".setting.EditAccount">
+
+    <!-- Toolbar -->
+
+    <ImageView
+        android:id="@+id/imgPhone2"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="392dp"
+
+        android:contentDescription="Phone Icon"
+        android:src="@drawable/phone2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgCalendar2"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="304dp"
+
+        android:contentDescription="Calendar"
+        android:src="@drawable/calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgKey2"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="224dp"
+
+        android:contentDescription="Key"
+        android:src="@drawable/key"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgUser2"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="148dp"
+
+        android:contentDescription="User Icon"
+        android:src="@drawable/user2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/btnn"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/pinkTOPapp"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_add_home_24"
+        app:title="แก้ไขบัญชี"
+        app:titleTextColor="@android:color/white" />
+
+    <!-- EditText for Username -->
+    <EditText
+        android:id="@+id/rEdtUser"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="136dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+
+        android:hint="ชื่อ"
+        android:inputType="text"
+        android:padding="18dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- EditText for Password -->
+    <EditText
+        android:id="@+id/rEdtPass"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+
+        android:hint="รหัสผ่าน"
+        android:inputType="text"
+        android:padding="18dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- EditText for Birthdate -->
+    <EditText
+        android:id="@+id/birth"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="296dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+
+        android:hint="วันเกิด dd/mm/yy"
+        android:padding="18dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- EditText for Phone -->
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="380dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+
+        android:hint="เบอร์มือถือ"
+        android:padding="18dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Save Button -->
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/rBtnReg"
+        android:layout_width="225dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="188dp"
+        android:backgroundTint="@color/pink1"
+        android:background="@drawable/rounded_button"
+
+        android:text="บันทึก"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="68dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back Button"
+        android:scaleType="centerInside"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

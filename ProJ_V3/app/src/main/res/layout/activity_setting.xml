@@ -1,0 +1,281 @@
+<RelativeLayout
+    android:id="@+id/activity_seting"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background_dark"
+    tools:context=".setting.Setting">
+
+    <!-- Top App Bar (แถบด้านบน) -->
+
+
+    <!-- FloatingActionButton (ปุ่มลอย) -->
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/btnn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="@color/pinkTOPapp"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+        app:navigationIcon="@drawable/baseline_add_home_24"
+        app:title="บัญชี"
+        app:titleTextColor="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/baseline_add_24"
+        app:backgroundTint="@color/pink1"
+        app:elevation="8dp"
+        app:maxImageSize="40dp" />
+
+    <!-- BottomAppBar (แถบล่าง) -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/pink2"
+        app:fabAlignmentMode="center"
+        app:fabCradleRoundedCornerRadius="30dp"
+        app:fabCradleMargin="8dp"
+        app:fabCradleVerticalOffset="10dp"
+        app:elevation="8dp"
+        tools:ignore="BottomAppBar">
+
+        <!-- ไอคอนปุ่ม -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/baseline_add_home_24"
+                android:background="@android:color/transparent"/>
+
+            <View
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/baseline_settings_24"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="85dp"
+        android:textColor="@color/primary"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtdate"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtname"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="85dp"
+        android:textColor="@color/primary"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtphone"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtdate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="85dp"
+        android:textColor="@color/primary"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtdelete"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtlogout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="85dp"
+        android:text="ลบบัญชี"
+        android:textColor="@color/primary"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtlogout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtphone"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="85dp"
+        android:text="ออกจากระบบ"
+        android:textColor="@color/primary"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+
+        android:layout_below="@+id/imgCalendar"
+        android:layout_alignEnd="@+id/imgCalendar"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="0dp"
+        android:contentDescription="Phone Icon"
+        android:src="@drawable/phone2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="115dp"
+        android:contentDescription="User Icon"
+        android:src="@drawable/user2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgCalendar"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/imgUser"
+
+        android:layout_alignEnd="@+id/imgUser"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="0dp"
+        android:contentDescription="Calendar"
+        android:src="@drawable/calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/btnNext2"
+        android:layout_alignEnd="@+id/btnNext2"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Next Button"
+        android:scaleType="centerInside"
+        android:src="@drawable/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnNext4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/btnNext"
+        android:layout_alignEnd="@+id/btnNext"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Next Button"
+        android:scaleType="centerInside"
+        android:src="@drawable/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnNext5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/btnNext4"
+        android:layout_alignStart="@+id/btnNext4"
+        android:layout_alignEnd="@+id/btnNext4"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Next Button"
+        android:scaleType="centerInside"
+        android:src="@drawable/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnNext2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/btnNext3"
+        android:layout_alignEnd="@+id/btnNext3"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Next Button"
+        android:scaleType="centerInside"
+        android:src="@drawable/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnNext3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Next Button"
+        android:scaleType="centerInside"
+        android:src="@drawable/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</RelativeLayout>
